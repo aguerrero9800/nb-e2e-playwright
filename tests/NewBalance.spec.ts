@@ -17,7 +17,7 @@ import { test, expect } from '@playwright/test';
         await page.keyboard.press('Enter');
         await page.waitForLoadState('domcontentloaded');
         await expect(page.getByText(/Resultados de la búsqueda/i)).toBeVisible();
-        await page.waitForTimeout(2000);
+        //await page.waitForTimeout(2000);
 
     });
 
@@ -33,7 +33,8 @@ import { test, expect } from '@playwright/test';
         await page.waitForTimeout(2000);    
 
     });
-
+   
+    //seleccion talle y color, cerrar popup 
     test('Seleccionar talle y color', async ({ page }) => {
         
         await page.goto('https://www.newbalance.com.ar/');
@@ -45,14 +46,34 @@ import { test, expect } from '@playwright/test';
         await expect(page.getByText(/Resultados de la búsqueda/i)).toBeVisible(); //Espera a que el DOM esté cargado.
         await page.locator("//img[@id='img-N3R014000']").click(); //talle
         await page.getByRole('button', { name: 'Seleccionar color red' }).click(); //color
-       
-        await page.pause()
+        await page.getByRole('button', { name: 'Seleccionar color black' }).click(); //color
+        //await page.pause()
 
         //await page.waitForTimeout(2000);    
 
     });
-    
 
+    // agregar al carrito 
+    test('Agregar al cart', async ({ page }) => {
+        
+        await page.goto('https://www.newbalance.com.ar/');
+        await page.waitForTimeout(2000);
+        await page.locator('//a[@href=\'#__cn_close_content\']').click({ timeout: 2000 }).catch(() => {}); //cerrar popup
+        await page.locator("//div[@class='search hidden-xs-down']//input[@placeholder='Buscar...']").fill('running');
+        await page.keyboard.press('Enter');
+        await page.waitForLoadState('domcontentloaded'); // Espera a que cargue la página de resultados
+        await expect(page.getByText(/Resultados de la búsqueda/i)).toBeVisible(); //Espera a que el DOM esté cargado.
+        await page.locator("//img[@id='img-N3R014000']").click(); //talle
+        await page.getByRole('button', { name: 'Seleccionar color red' }).click(); //color
+        await page.locator("//button[@class='add-to-cart btn btn-outline-primary']").click(); // agregar producto al cart
+        await page.waitForTimeout(2000);
+        await page.locator("//div[@class='minicart-total hide-link-med']//img[@alt='flame icon']").click(); //click en cart
+        await page.waitForTimeout(1000);
+        await page.pause()
+
+    });
+
+  
 
     
 
