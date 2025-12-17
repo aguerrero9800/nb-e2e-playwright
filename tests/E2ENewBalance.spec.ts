@@ -1,5 +1,6 @@
 import { test, expect } from '@playwright/test';
 import 'dotenv/config'; // carga credenciales del archivo .env 
+import { Page } from '@playwright/test';
 
 
     // ---Flujo inicial E2E USER REGISTRADO--    
@@ -33,8 +34,8 @@ import 'dotenv/config'; // carga credenciales del archivo .env
         console.log('Texto encontrado:', checkoutText);
 
         // --- Hacer login user registrado ---
-        const email = process.env.E2E_EMAIL;
-        const password = process.env.E2E_PASS;
+        const email = process.env.E2E_EMAIL as string;
+        const password = process.env.E2E_PASS as string;
 
         await page.locator("//input[@id='login-form-email']").fill(email);
         await page.locator("//input[@id='login-form-password']").fill(password);
@@ -45,14 +46,14 @@ import 'dotenv/config'; // carga credenciales del archivo .env
         
         // completar form 
        
-        const calle = process.env.E2E_calle;
-        const altura= process.env.E2E_altura;
-        const dni= process.env.E2E_dni;
-        const telefono= process.env.E2E_telefono;
-        const pais= process.env.E2E_Pais;
-        const provincia= process.env.E2E_Provincia;
-        const ciudad= process.env.E2E_Ciudad;
-        const CP= process.env.E2E_CP;
+        const calle = process.env.E2E_calle as string;
+        const altura= process.env.E2E_altura as string;
+        const dni= process.env.E2E_dni as string;
+        const telefono= process.env.E2E_telefono as string;
+        const pais= process.env.E2E_Pais as string;
+        const provincia= process.env.E2E_Provincia as string;
+        const ciudad= process.env.E2E_Ciudad as string;
+        const CP= process.env.E2E_CP as string;
         const cpInput = page.locator("//input[@id='shippingZipCodedefault']");
     
 
@@ -90,14 +91,54 @@ import 'dotenv/config'; // carga credenciales del archivo .env
         await expect(page).toHaveURL(/checkout\?stage=placeOrder/);
         await page.getByRole('button',{ name: 'Realizar Pedido'}).click();
 
+        //await page.pause();
 
-        await page.pause();
-
-
+        // falta añadir Tarjetas de prueba
 
 
         
         });
+
+        // mismo flujo hasta checkout
+        test('E2E NB user invitado', async ({ page }) => {
+           
+        await page.goto('https://www.newbalance.com.ar/');
+        await page.waitForTimeout(1000);
+        await page.locator('//a[@href=\'#__cn_close_content\']').click({ timeout: 1000 }).catch(() => {}); //cerrar popup
+        await page.locator("//div[@class='search hidden-xs-down']//input[@placeholder='Buscar...']").fill('running');
+        await page.keyboard.press('Enter');
+        await page.waitForLoadState('domcontentloaded'); // Espera a que cargue la página de resultados
+        await expect(page.getByText(/Resultados de la búsqueda/i)).toBeVisible(); //Espera a que el DOM esté cargado.
+
+        //---Seleccionar Producto ---
+        await page.locator("//img[@id='img-N3R014000']").click(); //talle
+        await page.getByRole('button', { name: 'Seleccionar color black' }).click(); //color
+        await page.locator("//button[@class='add-to-cart btn btn-outline-primary']").click(); // agregar producto al cart
+
+        //--- Abrir minicart y pulsar pagar---
+        await page.locator("//div[@class='minicart-total hide-link-med']//img[@alt='flame icon']").click(); //click en cart
+        await page.locator("//div[@class='minicart-footer']//a[@role='button'][normalize-space()='Pagar']").click(); // hacer click en botón pagar minicart
+        await page.waitForTimeout(1000);
+        console.log('URL checkout:', page.url());
+        await expect(page).toHaveURL(/Checkout-Login/);
+
+        // Inciar checkout como invitado
+        const MailInvitado = process.env.E2E_MailInvitado as string;
+
+        await page.getByRole('link', { name: 'Pagar como Invitado' }).click(); 
+        await page.locator("//input[@id='email-guest']").fill(MailInvitado);   
+        await page.getByRole('button', { name: 'Continuar como Invitado' }).click();
+        console.log('URL checkout:', page.url());
+        await expect(page).toHaveURL(/stage=shipping#shipping/);
+        
+
+      //  await page.pause();  
+
+
+
+            
+});
+
 
     
 
