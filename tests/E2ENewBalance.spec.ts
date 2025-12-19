@@ -6,6 +6,12 @@ import 'dotenv/config'; // carga credenciales del archivo .env
     // ---Flujo inicial E2E USER REGISTRADO--    
     //test('E2E NB user registrado', async ({ page }) => {
 
+  test('Abrir storefront DEV', async ({ page }) => {
+  await page.goto('https://development-na03-newbalance.demandware.net/on/demandware.store/Sites-NewBalance-Site/default');
+  await expect(page).toHaveURL(/Sites-NewBalance-Site/i);
+    });
+
+
     test('E2E NB user registrado', async ({ page }) => {
 
     if (!process.env.E2E_MailInvitado) {
@@ -18,9 +24,9 @@ import 'dotenv/config'; // carga credenciales del archivo .env
 
     const searchInput = page.locator("//div[@class='search hidden-xs-down']//input[@placeholder='Buscar...']");
 
-    await page.goto('https://www.newbalance.com.ar/');
+    await page.goto('https://development-na03-newbalance.demandware.net/on/demandware.store/Sites-NewBalance-Site/default');
     console.log('URL placeorder:', page.url());
-    await expect(page).toHaveURL(/www.newbalance.com.ar/);
+    await expect(page).toHaveURL(/Sites-NewBalance-Site/i);
     //await page.waitForTimeout(1000);
     await page.locator('//a[@href=\'#__cn_close_content\']').click({ timeout: 1000 }).catch(() => {}); //cerrar popup
     await searchInput.fill('running');
@@ -68,7 +74,7 @@ import 'dotenv/config'; // carga credenciales del archivo .env
     
     await page.locator("//input[@id='shippingAddressOnedefault']").fill(calle);
     await page.locator("//input[@id='shippingAddressTwodefault']").fill(altura);
-    await page.locator("//input[@id='dni']").fill(dni);
+    await page.locator("(//input[@id='dni'])[1]").fill(dni);
     await page.locator("//input[@id='shippingPhoneNumberdefault']").fill(telefono);
     await page.locator("//select[@id='shippingCountrydefault']").selectOption({label:pais});
     await page.locator("//select[@id='shippingStatedefault']").selectOption({label:provincia});
@@ -98,14 +104,15 @@ import 'dotenv/config'; // carga credenciales del archivo .env
     console.log('URL placeorder:', page.url());
     await expect(page).toHaveURL(/checkout\?stage=placeOrder/);
     await page.getByRole('button',{ name: 'Realizar Pedido'}).click();
+    await page.waitForTimeout(1000);
 
     //await page.pause();
 
-    // se redirige a la pasarela de pago       
+    // se redirige a la pasarela de pago falta agregar valdiaciones de tarjetas  
     });
 
-    // mismo flujo hasta checkout
-    //test('E2E NB user invitado', async ({ page }) => {
+    
+    //test Invitado falta modificar cambios de ambiente a dev
        test('E2E NB user invitado-checkout', async ({ page }) => {
 
        if (!process.env.E2E_MailInvitado) {

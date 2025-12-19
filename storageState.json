@@ -1,0 +1,227 @@
+{
+  "cookies": [
+    {
+      "name": "terminal",
+      "value": "5a141f07-c879-490e-84a6-8c93788485f3",
+      "domain": "verify.salesforce.com",
+      "path": "/v1/verify",
+      "expires": 1800719774.568597,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "cid",
+      "value": "C2C812356757336116775128071098105959",
+      "domain": "verify.salesforce.com",
+      "path": "/v1/verify",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Strict"
+    },
+    {
+      "name": "AUTH_SESSION_ID",
+      "value": "MWU5YzVhYWEtMWFiNC00ZmE2LTg4ZmYtYmQ4MWI3ZDcwZDJkLkJzUG9TTjhiczZKS1VrMExsQXRrcDdTS2xQVlVqeUJtOFZ1UTNuUnQ4eUdFMzNVZlJLZUtiZG0tbElZVUpQbEZhRlV6SGxwb194TEtoV3hBa1VGZFJn",
+      "domain": "account.demandware.com",
+      "path": "/dwsso/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "KC_AUTH_SESSION_HASH",
+      "value": "\"AaaHfj48hdBrL+iWdy0hI3kg8MYJSNFC0d7zHUQH5/I\"",
+      "domain": "account.demandware.com",
+      "path": "/dwsso/",
+      "expires": 1766159825.864442,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "KC_RESTART",
+      "value": "eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2In0..9uQZaMd9dI1QVkFwkFn3wg.4Him2gnQNktNmy_BDcx6kdTnOuz-dvPT8DHF9OTzG3hP078Y_CHi_mZdOAkXJHuiGbKUxoTVK-5qpjXJvnTwIW6CJB7pMm1k_IhWlld9Ja03s94_Fuji77Yxaw66QgIPb21QPfsQ7ItSdaURUEcAlpVlQcrts9j-a935Gb38BccwkX81TaV_hT1BDYT8x0FjE6I5psWVS5jPeo4p8whhH1iRpuF2HUnxtVrFreeRq1D8eh-BR3S5wXY1R6b_HYbdYR8XwUZohde1fwRh9LQJLUVwZgBM49UM3xMgrEUs8l84Nm3PDEBVrwASF-VF5FxVErjYu8lPwEClGwnQ63a7QFM5M990Smj36aP95P909jViSPF8PlM2IqiJMQAhx4BTQZvYxjigNQRyV80ektErcqJwF41ao-3Qt6faMsoN-JyyuDndw7g_hzgL5TIxtBkuduL19Xo-o7O2neIe-Wwo0f1ypdWrjA4w57AlmewvqZ9m1MUTz2fpHc_2sgcA8kvqVNjnFzZo0YNwoHSC966aPPJa1o81z53cl9jnXKPGUkuI6Y6jwbHZCTBWUIvrQrE4RGpVeNNVA6TY5fKB3w1m31o3vPbA0_1Pb30yab0XPEsQhyacPrACxOd3NDGqsJ1XxcyJlyqmQwh0N_2zRV6Xx1Sh2q2UWwK_gf9uPcFPPyydKlR-X0ORryaffTiMsMBYipw8uMEQUPGAOO3xv5QhVE3qx3QOC-OCkXJrvl1419-mqE_PZtAOAsh-g0--oZJGGec7Dn0CBF2T_1ljy5MkQCkJZyapfyzZ7IVW5vLoJkIZP8XzxpHRocKIOkHHccM5D_UBoOEZjB1En8UaM1RahOn7BOP3yc4qi4hCPnVKNrtOKiEN06fLmUGJTvPabvhKrhCpiAlVLPjgfWmK6mlo9H6LDEs4xBHop6L9wuBRMUogHd2PmzUmU8lqEB7rFUYwVY70Re5hnEDEi7IjzQu4CXaatPao3LUBsNKYFlUs4Ceruq5KFMV-t3YYjDVPclArouAFV87V-idra1KzSslHEmQFBC3GIV9s9rATJZ0cNBHcEhAgmaGDJVYCYUGi7lfrD8NCSPjRyEqHWkDcT6zd7eiM6DDW4pUwRhqj7J7da5RWmL5tpDi54ZUkIQuvjhD8jh8cB1-IruZ1_IZ8-STveosGjEvg3nJKHEsneoDP9Jsf93OhJ7bRReopF0sqcHXAi262Ojz68xjI4ezFl5Puxy1GQDnUIc76i9BC6Ff-pGJh6e2BQX9Ysm32J4l6UoG4b8cVSziDV64qeJyyt-kW3mNvpPWi78bzVw07Vbz9mfXqPRetLFEA6qDG3gbPUaNz.9Tp-p4k-wBQog3QEIs6fUg",
+      "domain": "account.demandware.com",
+      "path": "/dwsso/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "KEYCLOAK_IDENTITY",
+      "value": "eyJhbGciOiJIUzUxMiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICIzM2ZiNmQwZi04ODZhLTQxNGQtOWVmYS04ZjM5MzRmMjY2OTEifQ.eyJleHAiOjE3NjYyNDYxODAsImlhdCI6MTc2NjE1OTc4MCwianRpIjoiMGY1NGI4OGItMjE5Zi04MWMzLTgyOTAtNmI2NmFmYTZhZjRkIiwiaXNzIjoiaHR0cHM6Ly9hY2NvdW50LmRlbWFuZHdhcmUuY29tOjQ0My9kd3Nzby9vYXV0aDIiLCJzdWIiOiJmOmQ5NWJiYjFlLWM2MTAtNGVhYy1iZTdhLTNlM2QwY2E2M2ZjNTo1MzJhNGQ5MS03YWU5LTQ4YzEtYjQ3OC04OTdjZmYzNWY5ZGMiLCJ0eXAiOiJTZXJpYWxpemVkLUlEIiwic2lkIjoiMWU5YzVhYWEtMWFiNC00ZmE2LTg4ZmYtYmQ4MWI3ZDcwZDJkIiwic3RhdGVfY2hlY2tlciI6ImhXUEFWNFlQTS0wNEtFQ1pEdXlZcUg1aER4bENheUZzdzdOSDFMeXlkX1UifQ.eOYlnPfqfvKiYiOE4FcLh6I2brrm_NjgoEWI4W5Xa80qj5RteMeKYjHcmiHETLb15fej7EDW-EvkqJeXl78FMg",
+      "domain": "account.demandware.com",
+      "path": "/dwsso/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "KEYCLOAK_SESSION",
+      "value": "AaaHfj48hdBrL-iWdy0hI3kg8MYJSNFC0d7zHUQH5_I",
+      "domain": "account.demandware.com",
+      "path": "/dwsso/",
+      "expires": 1766246181.622018,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "dwsid",
+      "value": "ZGzgpJbqfNleH_H1OhX-JD-msdKUpwdFcz0IzzAllEhyFl6WNz769NCemHmlbzN3uvS_uamjc4WiytOsVuPEQQ==",
+      "domain": "development-na03-newbalance.demandware.net",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "X-Contour-Session-Affinity",
+      "value": "\"5aa0570397da3634\"",
+      "domain": "account.demandware.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "csrftoken",
+      "value": "638iR1kpnXQ1yEXnsSTgeCLR7nIdgpF4",
+      "domain": "verify.salesforce.com",
+      "path": "/",
+      "expires": 1797609374.568711,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "__cf_bm",
+      "value": "ztWvNi.oEzduBIYQ.ZLvbH.OoMMSf0G2R5kb6yrEGpo-1766159773-1.0.1.1-wT6rmApJu2bSQnZzoxUkPcLWzFTKA7fN3gzG.fGkMlUR2osVj185oSRDipHbxNRnD2iFK1sCGBI.qAwHez7purk82rE7dStpy4LBNfUmuXE",
+      "domain": ".verify.salesforce.com",
+      "path": "/",
+      "expires": 1766161574.568735,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "__cflb",
+      "value": "02DiuGcDGPYyjwVcthfYaa3QPc18ykQKDQ5viqyfzKtjv",
+      "domain": "verify.salesforce.com",
+      "path": "/",
+      "expires": 1766242574.56877,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "last.used.verifier",
+      "value": "733792cc-65cf-4f23-a67b-bf7814c05d2f",
+      "domain": "verify.salesforce.com",
+      "path": "/",
+      "expires": 1773935781.261742,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "dwbmsid",
+      "value": "AATQAyXUnEutgYh0PCfU_N1_nNIcVRki38HAI0wK0-9uoxg-1efXw8CSQ6MPwiNrM1GAEwJhzVez54a1tDrpdg==",
+      "domain": "development-na03-newbalance.demandware.net",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "sid",
+      "value": "mTUjUu2KhK9Tu92IHBaVocL_ciTvx_8zfpk",
+      "domain": "development-na03-newbalance.demandware.net",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "cqcid",
+      "value": "cdjb0KrAx0eaPdCjVcnnINyt1j",
+      "domain": "development-na03-newbalance.demandware.net",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "cquid",
+      "value": "||",
+      "domain": "development-na03-newbalance.demandware.net",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "dwanonymous_748017a87a113f4e6bbcf362e78a2ee0",
+      "value": "cdjb0KrAx0eaPdCjVcnnINyt1j",
+      "domain": "development-na03-newbalance.demandware.net",
+      "path": "/",
+      "expires": 1781711783.000518,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "__cq_dnt",
+      "value": "0",
+      "domain": "development-na03-newbalance.demandware.net",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "dw_dnt",
+      "value": "0",
+      "domain": "development-na03-newbalance.demandware.net",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    }
+  ],
+  "origins": [
+    {
+      "origin": "https://development-na03-newbalance.demandware.net",
+      "localStorage": [
+        {
+          "name": "_pendo_meta.377b5d99-1622-400f-5015-ab9941477791",
+          "value": "{\"ttl\":1774799782889,\"value\":538209367}"
+        },
+        {
+          "name": "_pendo___sg__.377b5d99-1622-400f-5015-ab9941477791",
+          "value": "{\"ttl\":1774799782891,\"value\":\"{}\"}"
+        },
+        {
+          "name": "_pendo_visitorId.377b5d99-1622-400f-5015-ab9941477791",
+          "value": "{\"ttl\":1774799782888,\"value\":\"m6B4dLI5JVDmJlS048m3B4VXn8yg5F01b7zyMeeZ65w=\"}"
+        },
+        {
+          "name": "_pendo_accountId.377b5d99-1622-400f-5015-ab9941477791",
+          "value": "{\"ttl\":1774799782888,\"value\":\"BMDB_DEV\"}"
+        }
+      ]
+    }
+  ]
+}

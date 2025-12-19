@@ -29,10 +29,15 @@ reporter: [
     trace: 'on', // guarda trazas paso a paso
     screenshot: 'only-on-failure', // captura si falla
     video: 'retain-on-failure', // graba si falla
+    storageState: 'storageState.json',// usar sesión guardada
     launchOptions: {
       slowMo: 200, // más lento para visualizar pasos
     },
+  
   },
+
+
+
   fullyParallel: true,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
   forbidOnly: !!process.env.CI,
@@ -57,6 +62,7 @@ reporter: [
       name: 'chromium',
       use: { ...devices['Desktop Chrome'] },
     },
+   
 
    // {
    //   name: 'firefox',
